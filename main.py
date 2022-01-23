@@ -10,7 +10,7 @@ from flask import Flask, request
 REGION = 'us-east-2'
 ENCLAVE_CID = 6
 ENCLAVE_PORT = 5000
-KMS_ALIAS = 'alias/trustd-cmk'
+KMS_ALIAS = 'alias/trustd-cmk-alias'
 DYNAMODB_TABLE = 'trustd-users'
 
 dynamodb = boto3.resource('dynamodb', region_name=REGION)

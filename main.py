@@ -1,4 +1,4 @@
-"""Example NitroPepper web application."""
+"""Example Trustd web application."""
 
 import socket
 import json
@@ -7,11 +7,11 @@ import boto3
 import requests
 from flask import Flask, request
 
-REGION = 'eu-central-1'
+REGION = 'us-east-2'
 ENCLAVE_CID = 6
 ENCLAVE_PORT = 5000
-KMS_ALIAS = 'alias/nitropepper-cmk'
-DYNAMODB_TABLE = 'nitropepper-users'
+KMS_ALIAS = 'alias/trustd-cmk'
+DYNAMODB_TABLE = 'trustd-users'
 
 dynamodb = boto3.resource('dynamodb', region_name=REGION)
 app = Flask(__name__)
